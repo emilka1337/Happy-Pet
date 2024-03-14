@@ -1,0 +1,100 @@
+.header-3 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+
+    .categories-block {
+        width: 22%;
+        display: flex;
+        align-items: center;
+        background-color: $accentColor;
+        padding: 0px 20px;
+        border-radius: $borderRadius $borderRadius 0 0;
+        color: #fff;
+        cursor: pointer;
+        
+        h3 {
+            margin-left: 20px;
+            font-weight: 400;
+            color: #fff;
+        }
+    }
+
+    nav {
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+        background-color: $darkColor;
+        border-radius: $borderRadius $borderRadius 0 0;
+        overflow: hidden;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+            a {
+                display: flex;
+                align-items: center;
+                padding: 15px;
+                height: 100%;
+                text-decoration: none;
+                color: #fff;
+                font-weight: 300;
+                font-size: 14px;
+                transition: 300ms;
+
+                &:hover {
+                    background-color: $accentColor;
+
+                    svg {
+                        color: #fff;
+                    }
+                }
+
+                svg {
+                    margin-right: 5px;
+                    color: $accentColor;
+                }
+            }
+        }
+
+        .cart-button {
+            display: flex;
+            align-items: center;
+            background-color: $accentColor;
+
+            a {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                padding: 15px;
+                color: #fff;
+                text-decoration: none;
+                font-weight: 300;
+                font-size: 14px;
+
+                svg {
+                    margin: 0px 10px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .header-3 {
+        flex-direction: column-reverse;
+
+        .categories-block, nav {
+            width: 100% !important;
+            border-radius: none !important;
+        }
+
+        nav, nav ul {
+            flex-direction: column;
+        }
+    }
+}

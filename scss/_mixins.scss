@@ -1,0 +1,44 @@
+@mixin carousel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #fff;
+    margin-bottom: 10px;
+
+    svg {
+        cursor: pointer;
+        transition: 300ms;
+
+        &:hover {
+            transform: scale(1.2);
+            color: $accentColor;
+        }
+
+        &:nth-child(1) {
+            transform: rotate(180deg);
+
+            &:hover {
+                transform: rotate(180deg) scale(1.2);
+            }
+        }
+    }
+
+    h4 {
+        font-weight: 400;
+        margin: 0;
+    }
+}
+
+@mixin card-price {
+    color: $accentColor;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 10px;
+
+    span {
+        color: #777;
+        text-decoration: line-through;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,193 @@
+.main-right {
+    width: 75%;
+
+    .carousel {
+        margin: 30px 0px;
+        display: flex;
+        background: #fff;
+
+        .carousel-left {
+            max-width: 100%;
+        }
+
+        .carousel-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+
+            h3 {
+                margin-bottom: 0;
+            }
+
+            a {
+                display: inline-block;
+                padding: 10px 20px;
+                text-decoration: none;
+                color: #fff;
+                background: $darkColor;
+                border-radius: $borderRadius;
+                transition: 300ms;
+
+                &:hover {
+                    background: $accentColor;
+                }
+            }
+        }
+    }
+
+    .offers {
+        margin: 30px 0px;
+        display: flex;
+        justify-content: space-between;
+
+        .offer-card {
+            width: 48.5%;
+            display: flex;
+            align-items: center;
+            background: #fff;
+            transition: 300ms;
+
+            &:hover {
+                background: $accentColor;
+
+                h3,
+                p {
+                    color: #fff;
+                }
+            }
+
+            .card-left {
+                padding-left: 30px;
+
+                a {
+                    text-decoration: none;
+                    color: $darkColor;
+                }
+            }
+
+            .card-right {
+                width: 50%;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .latest,
+    .featured {
+        margin: 30px 0px;
+
+        .heading {
+            @include carousel-heading;
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-between;
+
+            .card {
+                width: 32%;
+                padding: 20px;
+                background: #fff;
+
+                img {
+                    width: 100%;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $darkColor;
+                    font-size: 13px;
+                }
+
+                ul {
+                    padding: 0;
+                    list-style: none;
+                    display: flex;
+                    gap: 5px;
+
+                    button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 35px;
+                        height: 35px;
+                        color: #c2c2c2;
+                        background: #f2f2f2;
+                        border-radius: 50%;
+                        border: none;
+                        cursor: pointer;
+                        transition: 300ms;
+
+                        &:hover {
+                            background-color: $darkColor !important;
+                            color: #fff !important;
+                        }
+                    }
+
+                    li:nth-child(1) button {
+                        background-color: $accentColor;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main-right {
+        width: 100%;
+
+        .carousel {
+            flex-direction: column;
+
+            .carousel-left,
+            .carousel-right {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .carousel-right {
+                padding: 20px;
+            }
+        }
+
+        .offers {
+            flex-direction: column;
+
+            .offer-card {
+                width: 100%;
+                margin-bottom: 10px;
+                align-items: stretch;
+
+                .card-left {
+                    padding: 20px;
+                }
+
+                .card-right {
+                    display: flex;
+                    align-items: flex-end;
+                }
+            }
+        }
+
+        .latest .cards,
+        .featured .cards {
+            flex-direction: column;
+
+            .card {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

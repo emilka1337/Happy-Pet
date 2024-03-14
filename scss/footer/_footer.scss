@@ -1,0 +1,135 @@
+footer {
+    .footer-container {
+        width: 75%;
+        margin: auto;
+        padding: 20px 0px;
+
+        @media screen and (max-width: 992px) {
+            width: 95%;
+        }
+    }
+
+    .footer-top {
+        display: flex;
+        border-bottom: 1px solid #e1e0e0;
+        padding-bottom: 20px;
+
+        h4 {
+            font-size: 13px;
+            color: #323232;
+            font-weight: 300;
+        }
+
+        .about {
+            width: 50%;
+
+            p {
+                line-height: 19px;
+                font-size: 12px;
+            }
+        }
+
+        .events {
+            width: 50%;
+            padding-left: 20px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    font-size: 12px;
+                    color: #323232;
+                    font-weight: 300;
+                    margin-bottom: 10px;
+
+                    a {
+                        text-decoration: none;
+                        color: $accentColor;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        display: flex;
+        margin-top: 30px;
+
+        .links {
+            display: flex;
+            width: 70%;
+            border-right: 1px solid #e1e0e0;
+        }
+
+        h5 {
+            color: $accentColor;
+            font-size: 12px;
+            font-weight: 300;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            width: 23%;
+
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: $darkColor;
+                font-size: 12px;
+                transition: 300ms;
+                margin-bottom: 10px;
+
+                &:hover {
+                    color: $accentColor;
+                }
+            }
+        }
+
+        .social-links {
+            ul {
+                width: 100%;
+                padding-left: 50px;
+
+                svg {
+                    display: inline-block;
+                    margin-right: 10px;
+                    color: $accentColor;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .footer-container {
+        width: 95%;
+
+        .footer-top {
+            flex-direction: column;
+
+            .about,
+            .events {
+                width: 100%;
+                padding-left: 0;
+            }
+        }
+        
+        .footer-bottom {
+            flex-direction: column;
+
+            .links {
+                width: 100%;
+                border-right: none;
+                justify-content: space-between;
+            }
+
+            .social-links ul {
+                padding-left: 0;
+            }
+        }
+    }
+}

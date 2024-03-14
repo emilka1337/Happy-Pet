@@ -1,0 +1,14 @@
+header {
+    .header-container {
+        width: 75%;
+        margin: auto;
+
+        @media screen and (max-width: 992px) {
+            width: 100%;
+        }
+    }
+
+    @import "./header-1";
+    @import "./header-2";
+    @import "./header-3";
+}
